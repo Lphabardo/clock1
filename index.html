@@ -17,7 +17,7 @@
         .screen{position:fixed;inset:0;transition:opacity .3s,transform .3s;}
         .screen.hidden{opacity:0;pointer-events:none;transform:scale(.98);}
         #clock-app{background:#000;display:flex;flex-direction:column;}
-        #tab-bar{display:flex;justify-content:space-around;align-items:center;background:rgba(28,28,30,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:.5px solid var(--sep);padding:8px 0 calc(10px + env(safe-area-inset-bottom));flex-shrink:0;z-index:10;}
+        #tab-bar{display:flex;justify-content:space-around;align-items:center;background:rgba(28,28,30,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:.5px solid var(--sep);padding:4px 0 calc(7px + env(safe-area-inset-bottom));flex-shrink:0;z-index:10;}
         .tab-btn{display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;cursor:pointer;padding:4px 16px;min-width:70px;}
         .tab-btn svg{width:26px;height:26px;}
         .tab-btn span{font-size:10px;color:var(--sub);font-weight:400;}
@@ -31,7 +31,7 @@
 
         /* WORLD CLOCK */
         #pane-clock{background:#000;}
-        .wc-header{display:flex;justify-content:space-between;align-items:center;padding:16px 16px 8px;}
+        .wc-header{display:flex;justify-content:space-between;align-items:center;padding:25px 16px 12px;}
         .edit-btn{color:var(--orange);font-size:17px;background:none;border:none;cursor:pointer;}
         .add-btn{color:var(--orange);font-size:28px;background:none;border:none;cursor:pointer;line-height:1;}
         .pane-title{color:#fff;font-size:34px;font-weight:700;padding:0 16px 8px;}
