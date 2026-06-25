@@ -316,7 +316,8 @@
     </div>
     <div id="hdr">
         <div><div id="htitle">🔒 Личный чат</div><div id="status">подключение...</div></div>
-        <button id="xbtn" onclick="closeChat()">Выйти</button>
+       <button id="xbtn" onclick="closeChat()">Выйти</button>
+       <button onclick="clearChat()" style="background:none;border:none;color:var(--red);font-size:15px;cursor:pointer;padding:4px 8px;">🗑</button>
     </div>
     <div id="msgs">
         <div id="empty" class="show"><span>💬</span>Сообщений пока нет.<br>Напишите что-нибудь!</div>
@@ -759,6 +760,14 @@ async function closeChat(){
     document.getElementById('clock-app').classList.remove('hidden');
 }
 
+async function clearChat(){
+    if(!confirm('Удалить все сообщения для обоих?')) return;
+    await dbDel();
+    document.getElementById('msgs').innerHTML='<div id="empty" class="show"><span>💬</span>Сообщений пока нет.<br>Напишите что-нибудь!</div>';
+    lastId=0;
+    toast('Чат очищен');
+}
+    
 function setStatus(ok){
     const el=document.getElementById('status');
     el.textContent=ok?'в сети':'нет соединения';el.className=ok?'on':'';
